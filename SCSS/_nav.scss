@@ -1,0 +1,239 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+.nav__logo {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+    font-weight: var(--font-semi-bold);
+    color: var(--black-color)
+}
+
+.nav__logo-circle, .nav__toggle, .nav__logo-square {
+    width: 32px;
+    height: 32px;
+    background-color: var(--black-color);
+    display: grid;
+    place-items: center;
+    color: var(--third-color);
+}
+.nav__logo-square {
+    width: 15px;
+    height: 15px;
+    background: var(--third-color);
+    margin-right: .3rem;
+}
+/*.nav__logo-circle {
+    border-radius: 50%;
+    background-color: var(--second-color);
+} */
+.nav__toggle {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--third-color);
+    background-color: var(--white-color);
+}  
+.nav__toggle a:visited{
+    color: var(--third-color); 
+}
+.nav__logo-job {
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    white-space: nowrap;
+    font-size: var(--h3-font-size);
+    padding-left: .3rem;
+}
+.nav__logo-name {
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+    font-size: var(--h1-font-size);
+
+}
+
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+    .nav {
+        position: relative;
+        height: var(--header-height);
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container {
+        max-width: 1120px;
+        margin-inline: 1.5rem;
+    }
+    .nav__menu-mobile-menu {    /* Cuando esta en menu.html desplega el Menu-Mobile */
+        position: fixed;
+        top: 0%;
+        left: 0;
+        background-color: var(--second-color);
+        width: 100%;
+        padding-block: 1.8rem 5rem;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        transition: top .4;
+    }     
+    .nav__menu-mobile-home {    /* Cuando esta en index.html Guarda el Menu-Mobile */
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: var(--second-color);
+        width: 100%;
+        padding-block: 1.8rem 5rem;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        transition: top .4;
+    }  
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+    .nav__link {
+        position: relative;
+        color: var(--black-color-light);
+        font-size: var(--h4-font-size);
+        font-weight: var(--font-regular);
+        transition: color .3s;                          /* QUE HACE ESTO?? */
+    }
+    .nav__link::after {
+        content: '';
+        width: 0;
+        height: 1.2px;
+        background-color: var(--third-color);
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        transition: width .3s;
+    }
+    .nav__link:hover {
+        color: var(--third-color);
+        font-weight: var(--font-bold);
+    }
+    .nav__link:hover::after {
+        width: 25%;
+    }
+    
+    .nav__close {
+        position: absolute;
+        font-size: 1.5rem;
+        top: 1rem;
+        right: 1.5rem;
+        cursor: pointer;
+        color: var(--black-color-light);
+        transition: color .3s;   
+    }
+    
+    .nav__close::after {
+        content: '';
+        width: 0;
+        height: 1.7px;
+        background-color: var(--third-color);
+        position: absolute;
+        left: 0;
+        bottom: .1rem;
+        transition: width .2s; 
+    }
+    .nav__close:hover i:hover{
+        color: var(--third-color);
+    }
+    .nav__close:hover::after {
+        width: 100%;
+    }
+    .nav__close a:visited{
+        color: var(--black-color-light);  
+    }    
+    .nav__close {
+        color: var(--fourth-color);
+    }
+    
+}
+
+@media screen and (min-width: 1150px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: var(--z-fixed);
+        transition: box-shadow .4s;
+        padding-top: 1.8%;
+        padding-bottom: 1.8%;
+    }
+    .nav {
+        position: relative;
+        height: var(--header-height);
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .nav__logo {
+        display: flex;
+        column-gap: .08rem;
+        align-items: center;
+        font-weight: var(--font-semi-bold);
+        color: var(--black-color);
+    }
+    .nav__menu-mobile-menu {
+        display: none;
+    }     
+    .nav__toggle, .nav__close {
+        display: none;
+    }
+    .nav__menu-desktop {
+        height: 100%;
+        width: 100%;
+    } 
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        padding-right: 3rem;
+    }
+    .nav__link {
+        padding-right: 3rem;
+        position: relative;
+        color: var(--black-color-light);
+        font-size: var(--h4-font-size);
+        font-weight: var(--font-regular);
+        transition: color .3s;                          /* QUE HACE ESTO?? */
+    }
+    .nav__link::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--third-color);
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        transition: width .3s;
+    }
+    .nav__link:hover {
+        color: var(--third-color);
+        font-weight: var(--font-bold);
+    }
+    .nav__link:hover::after {
+        width: 25%;
+    }
+}

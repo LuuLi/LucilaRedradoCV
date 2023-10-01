@@ -1,0 +1,44 @@
+/* === Footer === */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(autofit, 2rem);
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-left: 180px;
+    grid-auto-rows: auto;
+    background-color: var(--white-color);
+    bottom: 0;
+    height: 100%;
+}
+@media (max-width: 1024px) {
+    .footer-grid {
+      padding-left: 20px;
+    }
+  }
+.footer-copyright {
+    font-family: var(--body-font);
+}
+.footer-number {
+    font-family: var(--body-font);
+    cursor: pointer;
+    color: var(--black-color);
+}
+.footer-mail {
+    font-family: var(--body-font);
+    cursor: pointer;    
+}
+.footer-follow {
+    font-family: var(--body-font);
+    cursor: pointer;
+}
+.home__social-link-footer {
+    margin: .8rem;
+    max-width: 30rem;
+    max-height: 30rem;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1rem;
+}

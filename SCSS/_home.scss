@@ -1,0 +1,162 @@
+.home {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.section {
+    justify-content: center;
+    align-items: center;
+}
+.section__background{
+    display: relative;
+    background-color: var(--first-color);
+    right: 0;
+    max-width: 60%;
+    max-height: 100%;
+    z-index: 2;
+} 
+.home__container {
+    display: flex;
+    background-color: var(--first-color);
+}
+.home__name{
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+    font-size: var(--h1-font-size);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.home__profile {
+    display: flex;
+    background-color: var(--first-color);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.home__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home__img {
+    border-radius: 50%;
+    max-height: 50%;
+    max-width: 50%;
+}
+.home__social{
+    height: 100%;
+}
+.home__social-link {
+    margin: 2rem;
+    max-width: 30rem;
+    max-height: 30rem;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1.8rem;
+}
+.home__info {
+    background-color: var(--white-color);
+    display: flex;
+    background-color: var(--white-color);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.texto-presentacion{
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+    font-size: var(--biggest-font-size);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+
+}
+.texto-normal {
+    font-family: var(--body-font);
+    max-width: 40rem;
+    padding-left: 1.5rem;
+    
+}
+.blue-line {
+    border-top: 2px solid #0050FF;;
+    max-width: 3.2rem;
+    padding-left: 15%;
+    padding-bottom: 5%;
+    z-index: 100;
+} 
+
+
+
+
+/* Buttons: Curriculum + Projects */
+.body__button {
+    margin-top: 3rem;
+}
+.body__button-blue {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1rem;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 3rem;
+}
+.body__button-blue a {
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+    color: var(--white-color);
+}
+.body__button-blue:hover {
+    background-color: var(--body-color);
+    color: var(--black-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #0051FF;
+    border-radius: 30px;
+}
+.body__button-blue a:hover {
+    color: var(--black-color);
+}
+.body__button-white {
+    background-color: var(--body-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+.body__button-white a {
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+    color: var(--black-color);
+}
+.body__button-white:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+}
+.body__button-white a:hover {
+    color: var(--white-color);
+}
