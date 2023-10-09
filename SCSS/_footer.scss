@@ -3,15 +3,16 @@
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-columns: repeat(autofit, 2rem);
     grid-gap: 10px;
     margin: 0 auto;
     max-width: 100%;
     padding-left: 180px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     grid-auto-rows: auto;
     background-color: var(--white-color);
-    bottom: 0;
     height: 100%;
+    margin-top: auto;
 }
 @media (max-width: 1024px) {
     .footer-grid {
@@ -35,7 +36,7 @@
     cursor: pointer;
 }
 .home__social-link-footer {
-    margin: .8rem;
+    margin-right: .8rem;
     max-width: 30rem;
     max-height: 30rem;
     text-decoration: none;

@@ -42,10 +42,11 @@
     cursor: pointer;
     color: var(--third-color);
     background-color: var(--white-color);
+
+    a:visited{
+        color: var(--third-color); 
+    }
 }  
-.nav__toggle a:visited{
-    color: var(--third-color); 
-}
 .nav__logo-job {
     font-family: var(--body-font);
     font-weight: var(--font-regular);
@@ -108,24 +109,26 @@
         color: var(--black-color-light);
         font-size: var(--h4-font-size);
         font-weight: var(--font-regular);
-        transition: color .3s;                          /* QUE HACE ESTO?? */
-    }
-    .nav__link::after {
-        content: '';
-        width: 0;
-        height: 1.2px;
-        background-color: var(--third-color);
-        position: absolute;
-        left: 0;
-        bottom: -.5rem;
-        transition: width .3s;
-    }
-    .nav__link:hover {
-        color: var(--third-color);
-        font-weight: var(--font-bold);
-    }
-    .nav__link:hover::after {
-        width: 25%;
+        transition: color .3s;  
+        
+        &::after {
+            content: '';
+            width: 0;
+            height: 1.2px;
+            background-color: var(--third-color);
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            transition: width .3s;
+        }
+
+        &:hover {
+            color: var(--third-color);
+            font-weight: var(--font-bold);
+            &::after {
+                width: 25%;
+            }
+        }
     }
     
     .nav__close {
@@ -134,33 +137,30 @@
         top: 1rem;
         right: 1.5rem;
         cursor: pointer;
-        color: var(--black-color-light);
         transition: color .3s;   
-    }
-    
-    .nav__close::after {
-        content: '';
-        width: 0;
-        height: 1.7px;
-        background-color: var(--third-color);
-        position: absolute;
-        left: 0;
-        bottom: .1rem;
-        transition: width .2s; 
-    }
-    .nav__close:hover i:hover{
-        color: var(--third-color);
-    }
-    .nav__close:hover::after {
-        width: 100%;
-    }
-    .nav__close a:visited{
-        color: var(--black-color-light);  
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 1.7px;
+            background-color: var(--third-color);
+            position: absolute;
+            left: 0;
+            bottom: .1rem;
+            transition: width .2s; 
+        }
+
+        &:hover i:hover{
+            color: var(--third-color);
+            &::after {
+                width: 100%;
+            }
+        }
+
+        a:visited{
+            color: var(--black-color-light);  
+        }    
     }    
-    .nav__close {
-        color: var(--fourth-color);
-    }
-    
 }
 
 @media screen and (min-width: 1150px) {
@@ -217,23 +217,25 @@
         color: var(--black-color-light);
         font-size: var(--h4-font-size);
         font-weight: var(--font-regular);
-        transition: color .3s;                          /* QUE HACE ESTO?? */
-    }
-    .nav__link::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        background-color: var(--third-color);
-        position: absolute;
-        left: 0;
-        bottom: -.5rem;
-        transition: width .3s;
-    }
-    .nav__link:hover {
-        color: var(--third-color);
-        font-weight: var(--font-bold);
-    }
-    .nav__link:hover::after {
-        width: 25%;
+        transition: color .3s;  
+            
+        &::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: var(--third-color);
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            transition: width .3s;
+        }                
+
+        &:hover {
+            color: var(--third-color);
+            font-weight: var(--font-bold);
+            &::after {
+                width: 25%;
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 .home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    background-color: var(--first-color);
 }
 .section {
     justify-content: center;
@@ -16,9 +20,15 @@
     z-index: 2;
 } 
 .home__container {
-    display: flex;
     background-color: var(--first-color);
 }
+@media screen and (min-width: 1150px) {
+    .home__container {
+        display: flex;
+        background-color: var(--first-color);
+    }
+}
+
 .home__name{
     font-family: var(--body-font);
     font-weight: var(--font-bold);
@@ -110,25 +120,28 @@
     border: none;
     border-radius: 30px;
     margin-bottom: 3rem;
+    
+    a {
+        font-family: var(--body-font);
+        font-weight: var(--font-medium);
+        color: var(--white-color);
+        &:hover {
+            color: var(--black-color);
+        }
+    }
+
+    &:hover {
+        background-color: var(--body-color);
+        color: var(--black-color);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #0051FF;
+        border-radius: 30px;
+    }
 }
-.body__button-blue a {
-    font-family: var(--body-font);
-    font-weight: var(--font-medium);
-    color: var(--white-color);
-}
-.body__button-blue:hover {
-    background-color: var(--body-color);
-    color: var(--black-color);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: 1px solid #0051FF;
-    border-radius: 30px;
-}
-.body__button-blue a:hover {
-    color: var(--black-color);
-}
+
 .body__button-white {
     background-color: var(--body-color);
     color: var(--white-color);
@@ -140,23 +153,26 @@
     margin: 2px 1rem;
     border-radius: 30px;
     border: 1px solid #000;
+
+    a {
+        font-family: var(--body-font);
+        font-weight: var(--font-medium);
+        color: var(--black-color);
+        &:hover {
+            color: var(--white-color);
+        }
+    }
+
+    &:hover {
+        background-color: var(--third-color);
+        color: var(--white-color);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+    }
 }
-.body__button-white a {
-    font-family: var(--body-font);
-    font-weight: var(--font-medium);
-    color: var(--black-color);
-}
-.body__button-white:hover {
-    background-color: var(--third-color);
-    color: var(--white-color);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
-}
-.body__button-white a:hover {
-    color: var(--white-color);
-}
+
