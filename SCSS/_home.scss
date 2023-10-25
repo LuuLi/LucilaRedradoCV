@@ -29,6 +29,20 @@
     }
 }
 
+
+.conocenos-full1 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 700px 700px;
+    grid-template-rows: 100px 710px;
+}
+@media screen and (min-width: 1150px) {
+    .conocenos-full1 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .home__name{
     font-family: var(--body-font);
     font-weight: var(--font-bold);
